@@ -1,0 +1,13 @@
+int Solution::solve(int A, int B, int C) {
+    int ans= 0;
+    //Approach
+    //C+A assuming it is in straight line and -1  because 1st value is distribute to 
+    //current position and %B because if they are in circle then what
+    // should be the value.
+    ans = (C+A-1) % B;
+    //if ans is 0 then last person should get the value hence returning B if it is 0
+    if(ans == 0)
+        return B;
+
+    return ans;
+}
